@@ -1,0 +1,315 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Text Sectioning and Disaggregation in Python.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOUxcWbk4o3uSauKieOQoXZ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mkane968/Extracted-Features/blob/master/Text_Sectioning_and_Disaggregation_in_Python.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Import Text Files and Add to DataFrame"
+      ],
+      "metadata": {
+        "id": "9sOwRC3vIdVf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "yDahFTGchibT"
+      },
+      "outputs": [],
+      "source": [
+        "#Mount Google Drive\n",
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Selet all files to upload\n",
+        "from google.colab import files\n",
+        "\n",
+        "uploaded = files.upload()"
+      ],
+      "metadata": {
+        "id": "c87z_j2mJECQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Put files into dataframe\n",
+        "import pandas as pd\n",
+        "\n",
+        "books = pd.DataFrame.from_dict(uploaded, orient='index')\n",
+        "books"
+      ],
+      "metadata": {
+        "id": "KhEVwGYLNkwZ",
+        "collapsed": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Reset index and add column names to make editing easier\n",
+        "books = books.reset_index()\n",
+        "books.columns = [\"Title\", \"Text\"]\n",
+        "books"
+      ],
+      "metadata": {
+        "id": "mUxVfRoqRebA"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Clean Titles and Text "
+      ],
+      "metadata": {
+        "id": "-74TxYNkiGbi"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Change data type to string\n",
+        "books = books.astype(str)\n",
+        "books"
+      ],
+      "metadata": {
+        "id": "Rh1LAZH7VzRX"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Remove .txt from titles\n",
+        "books['Title'] = books['Title'].str.replace(r'.txt', ' ', regex=True) "
+      ],
+      "metadata": {
+        "id": "MrXOjQKr2_7P"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Remove newline characters\n",
+        "books['Text'] = books['Text'].str.replace(r'\\s+|\\\\n', ' ', regex=True) \n",
+        "books"
+      ],
+      "metadata": {
+        "id": "_S2txHwRX5vo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Remove BOM charaters \n",
+        "import codecs\n",
+        "books['Text'] = books['Text'].str.decode(\"utf-8-sig\")\n",
+        "books['Text'] = books['Text'].encode(\"utf-8\")"
+      ],
+      "metadata": {
+        "id": "vPQXnUTFZ318"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Remove punctuation (optional)\n",
+        "books['Text'] = books['Text'].str.replace(r'[^\\w\\s]+', '', regex = True)\n",
+        "\n",
+        "#Remove numbers (optional)\n",
+        "books"
+      ],
+      "metadata": {
+        "id": "h_rDtxQq8Utc"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Check that strings are cleaned\n",
+        "books.iloc[0]['Text']"
+      ],
+      "metadata": {
+        "id": "ob2j0r6YZsOP"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Define cleaned dataframe\n",
+        "books_cleaned = books"
+      ],
+      "metadata": {
+        "id": "Wlyjxbp_hTiQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Chunk Texts by Chapter"
+      ],
+      "metadata": {
+        "id": "cj4jSFppS97y"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Count number of chapters in each text\n",
+        "chapter_counts = books_cleaned['Text'].str.count('chapter')\n",
+        "\n",
+        "#Append chapter counts to dataframe\n",
+        "books_cleaned[\"Chapters\"] = chapter_counts\n",
+        "books_cleaned"
+      ],
+      "metadata": {
+        "id": "Smrrk7fOhYwI"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Make new cell each time new chapter starts \n",
+        "new = books_cleaned[\"Text\"].str.split(\"chapter\", expand = True).set_index(books_cleaned['Title'])\n",
+        "new"
+      ],
+      "metadata": {
+        "id": "8bH_ZGrGjRHV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Flatten dataframe so each chapter is on own row, designated by book and chapter \n",
+        "chapters_df = new.stack().reset_index()\n",
+        "chapters_df.columns = [\"Book\", \"Chapter\", \"Text\"]\n",
+        "chapters_df.dropna\n",
+        "chapters_df"
+      ],
+      "metadata": {
+        "id": "pRvTfDVZq7O0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Disaggregate Words in Each Chapter"
+      ],
+      "metadata": {
+        "id": "_lhfzFMquJtE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Alphabetize words in each chapter string\n",
+        "chapters_df['Text'] = chapters_df['Text'].apply(lambda x: ' '.join(sorted(x.split())))\n",
+        "chapters_df"
+      ],
+      "metadata": {
+        "id": "KnuyMCaTuIcO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Combine book and chapter labels into one column\n",
+        "chapters_df['Book + Chapter'] = chapters_df['Book'].astype(str) + '_Chapter_' + chapters_df['Chapter'].astype(str)\n",
+        "\n",
+        "#Remove individual book and chapter columns\n",
+        "chapters_df.drop(columns=['Book', 'Chapter'])\n",
+        "\n",
+        "#Reindex so book + chapter is first column \n",
+        "column_names = \"Book + Chapter\", \"Text\"\n",
+        "chapters_df = chapters_df.reindex(columns=column_names)\n",
+        "chapters_df"
+      ],
+      "metadata": {
+        "id": "AtjYB_112gee"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Download CSV with Disaggregated Chapter Text"
+      ],
+      "metadata": {
+        "id": "36RTKW0D43dz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import files\n",
+        "\n",
+        "chapters_df.to_csv('bag_of_words_output.csv', encoding = 'utf-8-sig') \n",
+        "files.download('bag_of_words_output.csv')"
+      ],
+      "metadata": {
+        "id": "fqWPBvnK44ws"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
