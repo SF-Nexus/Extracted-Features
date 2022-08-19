@@ -19,7 +19,3 @@ Along with the readme, this repository contains two folders:
 2. Files uploaded for sectioning and disaggregation must be UTF-8 encoded text (.txt) files 
 3. CSV uploaded for topic modeling must contain disaggregated texts. A full pipeline from sectioning/disaggregation to topic modeling is available in the folder to streamline the process. 
 4. Several parameters are set within the code itself (e.g. chunk size for text sectioning, number of topics, chunk size, iterations, passes for topic modeling). These are explained at more length in the in-code comments. 
-
-
-## Code Usage
-
