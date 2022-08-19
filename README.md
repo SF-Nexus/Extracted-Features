@@ -1,2 +1,25 @@
 # Extracted Features
-Retrieving and analyzing extracted features from the sci-fi corpus
+
+Updated August 2022
+
+This repository provides methods for retrieving and analyzing extracted features from textual corpora. Its intended use is to analyze a collection of science fiction texts at Temple University which are currently under copyright. 
+
+## Table of Contents
+Along with the readme, this repository contains two folders: 
+- **notebooks:** Jupyter and Google Colab notebooks for analyzing extracted features
+  - **[1-Text Sectioning & Disaggregation (Colab)](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/1-Text%20Sectioning%20%26%20Disaggregation%20(Colab).ipynb):** Segments and disaggregates (alphabetizes) texts in a corpus based on chapters, chunks of chapters, and chunks of n length
+  - **[2-Generating and Evaluating Topic Models (Colab):](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/2-Generating%20and%20Evaluating%20Topic%20Models%20(Colab).ipynb)**  Performs LDA topic modeling on disaggregated corpus using Google Colab
+  - **[2-Generating and Evaluating Topic Models (Local):](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/2-Generating%20and%20Evaluating%20Topic%20Models%20(Local).ipynb)**  Performs LDA topic modeling on disaggregated corpus using Google Colab
+  - **[3-Complete Pipeline-Text Sectioning, Disaggregation and Topic Modeling.ipynb:](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/3-Complete%20Pipeline-Text%20Sectioning%2C%20Disaggregation%20and%20Topic%20Modeling.ipynb)** Segments and disaggregates, then runs topic modeling on corpus of texts. 
+  - **[Experiments with HTRC Feature Reader (Colab).ipynb: ](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/Experiments%20with%20HTRC%20Feature%20Reader%20(Colab).ipynb) Completely separate method of analyzing texts using HathiTrust feature reader. 
+- `sample_data` → csv file of disaggregated data as well as sample output from topic modeling code
+
+## Requirements
+1. User must be able to run Python through Google Colab and/or a local environment. Download the latest version of Python here: https://www.python.org/downloads/ 
+2. Files uploaded for sectioning and disaggregation must be UTF-8 encoded text (.txt) files 
+3. CSV uploaded for topic modeling must contain disaggregated texts. A full pipeline from sectioning/disaggregation to topic modeling is available in the folder to streamline the process. 
+4. Several parameters are set within the code itself (e.g. chunk size for text sectioning, number of topics, chunk size, iterations, passes for topic modeling). These are explained at more length in the in-code comments. 
+
+
+## Code Usage
+
