@@ -11,7 +11,7 @@ Along with the readme, this repository contains two folders:
   - **[2-Generating and Evaluating Topic Models (Colab):](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/2-Generating%20and%20Evaluating%20Topic%20Models%20(Colab).ipynb)**  Performs LDA topic modeling on disaggregated corpus using Google Colab
   - **[2-Generating and Evaluating Topic Models (Local):](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/2-Generating%20and%20Evaluating%20Topic%20Models%20(Local).ipynb)**  Performs LDA topic modeling on disaggregated corpus using Google Colab
   - **[3-Complete Pipeline-Text Sectioning, Disaggregation and Topic Modeling.ipynb:](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/3-Complete%20Pipeline-Text%20Sectioning%2C%20Disaggregation%20and%20Topic%20Modeling.ipynb)** Segments and disaggregates, then runs topic modeling on corpus of texts. 
-- **sample_data:**  csv file of disaggregated data and sample output from topic modeling code
+- **data:**  csv file of disaggregated data and sample output from topic modeling code
 
 ## Requirements
 1. User must be able to run Python through Google Colab and/or a local environment. Download the latest version of Python here: https://www.python.org/downloads/ 
