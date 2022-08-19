@@ -4,7 +4,7 @@ Updated August 2022
 
 This repository provides methods for retrieving and analyzing extracted features from textual corpora. Its intended use is to analyze a collection of science fiction texts at Temple University which are currently under copyright. 
 
-## Table of Contents
+## Contents
 Along with the readme, this repository contains two folders: 
 - **notebooks:** Jupyter and Google Colab notebooks for analyzing extracted features
   - **[1-Text Sectioning & Disaggregation (Colab)](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/1-Text%20Sectioning%20%26%20Disaggregation%20(Colab).ipynb):** Segments and disaggregates (alphabetizes) texts in a corpus based on chapters, chunks of chapters, and chunks of n length
