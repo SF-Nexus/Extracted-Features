@@ -5,15 +5,13 @@ Updated January 2023
 This repository provides methods for retrieving and analyzing extracted features from textual corpora. Its intended use is to analyze a collection of science fiction texts at Temple University which are currently under copyright. 
 
 ## Contents
-Along with the readme, this repository contains two folders: 
-- **notebooks:** Jupyter and Google Colab notebooks for analyzing extracted features
-  - **[1-Text Sectioning & Disaggregation (Colab)](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/1-Text%20Sectioning%20%26%20Disaggregation%20(Colab).ipynb):** Segments and disaggregates (alphabetizes) texts in a corpus based on chapters, chunks of chapters, and chunks of n length
-   - **[1-Text Sectioning & Disaggregation (Jupyter Notebook)](https://github.com/SF-Nexus/extracted-features/blob/main/notebooks/1-Text%20Sectioning%20%26%20Disaggregation%20(Jupyter%20Notebook).ipynb):** Segments and disaggregates (alphabetizes) texts in a corpus based on chapters, chunks of chapters, and chunks of n length
-  - **[2-LDA Topic Modeling (Colab):](https://github.com/SF-Nexus/extracted-features/blob/main/notebooks/2-LDA%20Topic%20Modeling%20(Colab).ipynb)**  Performs LDA topic modeling on disaggregated corpus using Google Colab
-  - **[2-LDA Topic Modeling (Jupyter Notebook):](https://github.com/SF-Nexus/extracted-features/blob/main/notebooks/2-LDA%20Topic%20Modeling%20(Jupyter%20Notebook).ipynb)**  Performs LDA topic modeling on disaggregated corpus using Jupyter Notebook
-  - **[3-Text Sectioning, Disaggregation and LDA Topic Modeling (Colab).ipynb:](https://github.com/SF-Nexus/extracted-features/blob/main/notebooks/3-Text%20Sectioning%2C%20Disaggregation%20and%20LDA%20Topic%20Modeling%20(Colab).ipynb)** Segments and disaggregates, then runs topic modeling on corpus of texts. 
-  - **[4-BERTopic Topic Modeling (Jupyter Notebook)](https://github.com/SF-Nexus/Extracted-Features/blob/main/notebooks/1-Text%20Sectioning%20%26%20Disaggregation%20(Colab).ipynb):** Performs BERTopic topic modeling on disaggregated corpus using Jupyter Notebooks
-- **data:**  csv file of disaggregated data and sample output from topic modeling code
+This repository contains two folders: 
+- **notebooks:** Google Colab notebooks for cleaning and analyzing extracted features with Python. A subfolder (jupyter-notebooks) contains Jupyter Notebook versions of the code.
+  - **1-Text Sectioning & Disaggregation:** Segments and disaggregates (alphabetizes) texts in a corpus based on chapters, chunks of chapters, and chunks of n length
+  - **2-Cleaning and Basic Text Analysis:**  Methods for cleaning the segmented and disaggregated text files and performing word counts, chapter counts, stopword removal, and other basic frequency calculations and enrichment processes.
+  - **3-LDA Topic Modeling:**  Performs LDA topic modeling on disaggregated corpus 
+  - **4-BERTopic Topic Modeling:** Performs BERTopic topic modeling on disaggregated corpus
+- **data:** Data inputs and outputs, including csv file of disaggregated texts and visualizations from topic modeling 
 
 ## Requirements
 1. User must be able to run Python through Google Colab and/or a local environment. Download the latest version of Python here: https://www.python.org/downloads/ 
