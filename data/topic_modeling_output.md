@@ -40,3 +40,9 @@ Topics Used By Brian Aldiss vs. Ursula Leguin
 
 ![image](/data/BERTopic_output/BERTopic_Topic_Use_Comparison_Between_Aldiss_Leguin.png "Aldiss_Leguin_Topic_Comparison")
 
+### Topic Usage Over Time
+
+Frequency with which authors use topics of interest throughout the 20th century. 
+
+![image](/data/BERTopic_output/BERTopic_Topic_Usage_over_Time.png "Topic_Use_Over_Time")
+
