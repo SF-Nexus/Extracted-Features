@@ -6,13 +6,8 @@ This repository provides methods for retrieving and analyzing extracted features
 
 ## Contents
 This repository contains two folders: 
-- **notebooks:** Python notebooks for cleaning and analyzing extracted features with Python. Subfolders (google-colab and jupyter-notebooks) contain Google Colaboratory and Jupyter Notebook versions of the code.
-  - **1-Text Sectioning & Disaggregation:** Segments and disaggregates (alphabetizes) texts in a corpus based on chapters, chunks of chapters, and chunks of n length
-  - **2-Cleaning and Basic Text Analysis:**  Methods for cleaning the segmented and disaggregated text files and performing word counts, chapter counts, stopword removal, and other basic frequency calculations and enrichment processes.
-  - **3-LDA Topic Modeling:**  Performs LDA topic modeling on disaggregated corpus 
-  - **4-BERTopic Topic Modeling:** Performs BERTopic topic modeling on disaggregated corpus
+- **notebooks:** Python notebooks for cleaning and analyzing extracted features. Subfolders (google-colab and jupyter-notebooks) contain Google Colaboratory and Jupyter Notebook versions of the code.
 - **data:** Data inputs and outputs, including csv file of disaggregated texts and visualizations from topic modeling 
-  - **Topic Modeling Output Guide:** Describes output from LDA and BERTopic topic modeling.
 
 ## Requirements
 1. User must be able to run Python through Google Colab and/or a local environment. Download the latest version of Python here: https://www.python.org/downloads/ 
