@@ -12,6 +12,7 @@ This repository contains two folders:
   - **3-LDA Topic Modeling:**  Performs LDA topic modeling on disaggregated corpus 
   - **4-BERTopic Topic Modeling:** Performs BERTopic topic modeling on disaggregated corpus
 - **data:** Data inputs and outputs, including csv file of disaggregated texts and visualizations from topic modeling 
+  - **Topic Modeling Output Guide:** Describes output from LDA and BERTopic topic modeling.
 
 ## Requirements
 1. User must be able to run Python through Google Colab and/or a local environment. Download the latest version of Python here: https://www.python.org/downloads/ 
