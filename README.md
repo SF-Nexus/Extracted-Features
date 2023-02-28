@@ -6,7 +6,7 @@ This repository provides methods for retrieving and analyzing extracted features
 
 ## Contents
 This repository contains two folders: 
-- **notebooks:** Google Colab notebooks for cleaning and analyzing extracted features with Python. A subfolder (jupyter-notebooks) contains Jupyter Notebook versions of the code.
+- **notebooks:** Python notebooks for cleaning and analyzing extracted features with Python. Subfolders (google-colab and jupyter-notebooks) contain Google Colaboratory and Jupyter Notebook versions of the code.
   - **1-Text Sectioning & Disaggregation:** Segments and disaggregates (alphabetizes) texts in a corpus based on chapters, chunks of chapters, and chunks of n length
   - **2-Cleaning and Basic Text Analysis:**  Methods for cleaning the segmented and disaggregated text files and performing word counts, chapter counts, stopword removal, and other basic frequency calculations and enrichment processes.
   - **3-LDA Topic Modeling:**  Performs LDA topic modeling on disaggregated corpus 
