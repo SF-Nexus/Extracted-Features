@@ -1,3 +1,3 @@
 # LDA Output
 
-Here is the [output](https://github.com/SF-Nexus/extracted-features/blob/main/data/LDA_output/LDA_Topics_Visualization.html).
+Here is the [output](https://htmlpreview.github.io/#topic=0&lambda=1&term=).
