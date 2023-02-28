@@ -6,8 +6,8 @@ This repository provides methods for retrieving and analyzing extracted features
 
 ## Contents
 This repository contains two folders: 
-- **notebooks:** Python notebooks for cleaning and analyzing extracted features. Subfolders (google-colab and jupyter-notebooks) contain Google Colaboratory and Jupyter Notebook versions of the code.
 - **data:** Data inputs and outputs, including csv file of disaggregated texts and visualizations from topic modeling. 
+- **notebooks:** Python notebooks for cleaning and analyzing extracted features. Subfolders (google-colab and jupyter-notebooks) contain Google Colaboratory and Jupyter Notebook versions of the code.
 
 ## Requirements
 1. User must be able to run Python through Google Colab and/or a local environment. Download the latest version of Python here: https://www.python.org/downloads/ 
