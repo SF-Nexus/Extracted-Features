@@ -1,4 +1,4 @@
-# Topic Modeling Output Guide
+# Topic Modeling Output 
 
 ## LDA Topic Modeling Output
 
