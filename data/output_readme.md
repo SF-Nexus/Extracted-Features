@@ -43,6 +43,7 @@ Topics Used By Brian Aldiss vs. Ursula Leguin
 ### Topic Usage Over Time
 
 Frequency with which authors use topics of interest throughout the 20th century. 
+Note: frequency is calculated each time a "chapter/chunk" from a book uses the topic most frequently, so the most frequently used topics might be frequent because of their prevalence across chapters of a particular book rather than across multiple books. This is something to fine-tune in how we build the visualization.
 
 ![image](/data/BERTopic_output/BERTopic_Topic_Usage_over_Time.png "Topic_Use_Over_Time")
 
