@@ -4,3 +4,4 @@ This folder contains notebooks for cleaning and analyzing extracted features wit
 2. **Cleaning and Basic Text Analysis:** Methods for cleaning the segmented and disaggregated text files and performing word counts, chapter counts, stopword removal, and other basic frequency calculations and enrichment processes
 3. **LDA Topic Modeling:** Performs LDA topic modeling on disaggregated corpus
 4. **BERTopic Topic Modeling:** Performs BERTopic topic modeling on aggregated corpus
+5. **BookNLP:** Generates extracted features sets (named entities and supersense tags) using BookNLP.
