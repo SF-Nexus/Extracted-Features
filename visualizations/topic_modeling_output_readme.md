@@ -4,7 +4,7 @@
 
 Here is the output from LDA analysis of the Round 3 (Climate Fiction) texts. Prior to analysis, these texts were split into 1000-word "chunks" per chapter and disaggregated. All stopwords and non-English words were removed. 
 
-All 178 topics are visualized below. Access complete list with keywords [here](https://github.com/SF-Nexus/extracted-features/blob/main/data/LDA_output/LDA_topics_keywords_df.csv).
+All 178 topics are visualized below.
 
 ![image](/data/LDA_output/LDA_Topic_Modeling_Viz.png "LDA_Topic_Modeling_Viz")
 
@@ -13,8 +13,6 @@ Access the interactive version of the topic visualization [here](https://htmlpre
 ## BERTopic Topic Modeling Output
 
 Here is the output from BERTopic analysis of the Round 3 (Climate Fiction) texts. Prior to analysis, these texts were split into 1000-word "chunks" per chapter, since BERTopic does better with smaller pieces of data. These texts were kept in aggregated form and all non-English words were removed. Stopwords were removed after BERTopic analysis occurred.
-
-Access list of 68 topics (named manually) [here](https://github.com/SF-Nexus/extracted-features/blob/main/data/BERTopic_output/Named_BERTopic_Topics.csv).
 
 ### Word Clouds with Most Common Words Per Topic
 Topic 6: Street and Vehicles
