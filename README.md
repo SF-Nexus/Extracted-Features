@@ -6,7 +6,7 @@ This repository contains notebooks for retrieving and analyzing extracted featur
 
 ## Contents
 This repository contains two folders: 
-- **notebooks:** Python and R notebooks for retrieving and analyzing **extracted features**, or non-consumable, disaggregated versions of copyrighted work for research purposes 
+- **notebooks:** Python and R notebooks for retrieving and analyzing ***extracted features***, or non-consumable, disaggregated versions of copyrighted work for research purposes 
 - **data:** Sample texts and outputs 
 
 ## Requirements
