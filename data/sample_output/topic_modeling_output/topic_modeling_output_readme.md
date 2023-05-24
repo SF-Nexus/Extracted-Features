@@ -21,7 +21,7 @@ Topic 18: Disease Outbreak
 
 Topic 33: War Command
 
-![image](/data/BERTopic_output/BERTopic_War_Command_WordCloud.png)
+![image](data/BERTopic_output/BERTopic_War_Command_WordCloud.png)
 
 Topic 47: Energy
 
