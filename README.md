@@ -17,4 +17,5 @@ This repository contains two folders:
 
 ## Contributors
 **Jeff Antsen:** R notebooks and documentation
+
 **Megan Kane:** Python notebooks and documentation
