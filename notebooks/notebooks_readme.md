@@ -9,5 +9,5 @@ The Analyzing Extracted Features subfolder contains the following notebooks:
 - **Cleaning and Basic Text Analysis:** Methods for cleaning the segmented and disaggregated text files and performing word counts, chapter counts, stopword removal, and other basic frequency calculations and enrichment processes (Jupyter Notebook and Google Colab versions)
 - **LDA Topic Modeling:** Performs LDA topic modeling on disaggregated corpus (Jupyter Notebook and Google Colab versions)
 - **BERTopic Topic Modeling:** Performs BERTopic topic modeling on aggregated corpus (Jupyter Notebook and Google Colab versions)
-
+- **Mapping Semantic Similarity with Atlas:** Uses Atlas to generate web-based maps of texts, clusters by semantic similarity (Jupyter Notebook version)
 
